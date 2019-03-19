@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width , initial-scale=1 , maximum-scale=1" />
+    </meta>
+    <title>MIU狗便當寵物鮮食</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/swiper.css" rel="stylesheet" type="text/css">
+    <style>
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 頁首 選單 主視覺 -->
+    <header>
+        <nav class="menu">
+            <ul>
+                <li class="item">最新消息</li>
+                <li class="item">關於我們</li>
+                <li class="item">產品介紹</li>
+                <li class="item">合作商店</li>
+                <li class="item">Q&A</li>
+                <li class="item">聯絡我們</li>
+            </ul>
+        </nav>
+        <img style="position:absolute; width: 100%;" src="images/bnr_frame.png" alt="">
+        <video class="banner" autoplay loop muted>
+            <source src="reference/banner_video.mp4" type="video/mp4">
+        </video>
+    </header>
+
+    <!-- 主內容 -->
+    <main>
+        <section class="hr_line">
+            <!--------- 水平分隔線 --------->
+            <div class="main_content">
+
+                <!-- 新聞區 -->
+                <div class="news main_half">
+                    <img style="width:150px;" src="images/news.jpg" alt="news">
+                    <figure class="news_item">
+                        <div class="cover_1 news_img"></div>
+                        <div class="content">
+                            <figcaption>瘋狗幫三月刊</figcaption>
+                            <p>2019.03.13</p>
+                            <p>訓狗達人教你如何讓你家的頑皮狗屈服</p>
+                        </div>
+                    </figure>
+                    <figure class="news_item">
+                        <div class="cover_2 news_img"></div>
+                        <div class="content">
+                            <figcaption>瘋狗幫二月刊</figcaption>
+                            <p>2019.02.28</p>
+                            <p>連假期間最好的遛狗去處報你知</p>
+                        </div>
+                    </figure>
+                    <figure class="news_item">
+                        <div class="cover_3 news_img"></div>
+                        <div class="content">
+                            <figcaption>瘋狗幫一月刊</figcaption>
+                            <p> 2019.01.31</p>
+                            <p>年前迎新春，健康狗食佛心特惠中</p>
+                        </div>
+                    </figure>
+                    <div class="btn_area">
+                        <button class="btn_more">看更多！</button>
+                    </div>
+                </div>
+
+                <!--------- 垂直分割線--------->
+                <div class="vt_line"></div>
+
+                <!-- 產品區 -->
+                <div class="goods main_half">
+                    <img style="width:150px;" src="images/buy.png" alt="news">
+                    <div class="goods_item">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img style="width: 300px;" src="images/f1.jpg" alt=""></div>
+                                <div class="swiper-slide"><img style="width: 300px;" src="images/f2.jpg" alt=""></div>
+                                <div class="swiper-slide"><img style="width: 300px;" src="images/f3.jpg" alt=""></div>
+                            </div>
+                            <!-- Add Arrows -->
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                    </div>
+                    <div id="item_title">訓狗達人教你如何讓你家的頑皮狗屈服</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 頁尾 -->
+    <footer class="footer">
+        <nav class="menu_bottom">
+            <ul>
+                <li class="item"><a href="javascript:void(0);">最新消息</a></li>
+                <li class="item"><a href="javascript:void(0);">關於我們</a></li>
+                <li class="item"><a href="javascript:void(0);">產品介紹</a></li>
+                <li class="item"><a href="javascript:void(0);">合作商店</a></li>
+                <li class="item"><a href="javascript:void(0);">Q&A</a></li>
+                <li class="item"><a href="javascript:void(0);">聯絡我們</a></li>
+            </ul>
+        </nav>
+        Copyright © 2019 miu狗便當 保留一切權利。
+    </footer>
+    <script src="js/swiper.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+</body>
+
+</html>
