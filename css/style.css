@@ -191,10 +191,7 @@ header>nav>a:hover, nav>a:focus {
     .main_content {
         display: block;
     }
-    .main_half {
-        width: 100%;
-    }
-    .main_third {
+    .main_half, .main_third, .main_third_one, .main_third_two {
         width: 100%;
     }
 }
@@ -342,8 +339,4 @@ header>nav>a:hover, nav>a:focus {
     main .item {
         width: 90%;
     }
-}
-
-._2p3a {
-    width: 100%;
 }
