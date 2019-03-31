@@ -325,6 +325,17 @@ header>nav>a:hover, nav>a:focus {
     right: 240px;
 }
 
+/* contact */
+
+.contact-list {
+    margin: auto;
+}
+
+.contact-list li {
+    list-style-type: none;
+    font-size: 2em;
+}
+
 /* pad版 */
 
 @media (max-width:1023px) {
