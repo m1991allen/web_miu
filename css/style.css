@@ -79,8 +79,12 @@ header {
     font-size: 1.2em;
 }
 
+.item::after {
+    content: url('../images/small_triangle.png');
+}
+
 .menu ul .item:hover {
-    background: rgba(255, 255, 255, 0.79);
+    background: #ffffffc9;
     color: black;
     cursor: pointer;
 }
@@ -102,7 +106,7 @@ header>nav {
     display: inline-block;
     position: absolute;
     z-index: 999;
-    width: 110px;
+    /* width: 110px; */
     font-size: 10px;
     margin-top: 70px;
 }
@@ -120,6 +124,12 @@ header>nav>a {
     transition: .5s background;
     font-weight: 600;
     letter-spacing: 2.5px;
+}
+
+header>nav>a::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f1b0";
 }
 
 header>nav>.home {
@@ -154,6 +164,8 @@ header>nav>a:hover, nav>a:focus {
     margin: 100px auto 0;
 }
 
+/* layout 與 RWD控制區 */
+
 .main_content {
     display: flex;
     margin: 60px auto;
@@ -162,6 +174,28 @@ header>nav>a:hover, nav>a:focus {
 .main_half {
     width: 50%;
 }
+
+.main_third {
+    width: 33.3%;
+}
+
+.main_third_one {}
+
+.main_third_two {}
+
+@media screen and (max-width:768px) {
+    .main_content {
+        display: block;
+    }
+    .main_half {
+        width: 100%;
+    }
+    .main_third {
+        width: 100%;
+    }
+}
+
+/* layout 與 RWD控制區 end */
 
 .news {
     display: flex;
@@ -270,13 +304,24 @@ header>nav>a:hover, nav>a:focus {
 }
 
 .menu_bottom a {
-    color: rgb(87, 87, 87);
+    color: #575757;
     text-decoration: none;
     transition: .5s;
 }
 
 .menu_bottom a:hover {
     color: black;
+}
+
+.menu_bottom ul li i {
+    opacity: 0;
+    transition: all 0.2s ease-out 0s;
+    width: 30px;
+}
+
+.menu_bottom ul li:hover i {
+    opacity: 1;
+    right: 240px;
 }
 
 /* pad版 */
