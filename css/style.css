@@ -65,6 +65,7 @@ header {
     margin: auto;
     width: 100%;
     z-index: 9999;
+    padding-inline-start: 0px;
 }
 
 .menu ul .item {
@@ -333,7 +334,7 @@ header>nav>a:hover, nav>a:focus {
 
 .contact-list li {
     list-style-type: none;
-    font-size: 2em;
+    font-size: 1.4em;
 }
 
 /* pad版 */
