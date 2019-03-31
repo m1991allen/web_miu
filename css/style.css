@@ -1,19 +1,26 @@
 @charset "UTF-8";
 /* 全域共用 */
 
-* {
+*, *:before, *:after {
     box-sizing: border-box;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Voltaire);
+@font-face {
+    font-family: 'hkpianpiantibz';
+    src: url(../font/hkpianpiantibz.otf);
 }
 
 body {
     margin: 0;
     padding: 0;
     border: 0;
+    background-color: hsl(49, 97%, 74%);
     background-image: url(../images/bg_img.jpg);
 }
 
 html, body {
-    font-family: "游明朝", 'Noto Sans JP', sans-serif, 'Noto Sans TC', "MS Mincho", '微軟正黑體';
+    font-family: "hkpianpiantibz", "游明朝", 'Noto Sans JP', sans-serif, 'Noto Sans TC', "MS Mincho", '微軟正黑體';
     -webkit-text-size-adjust: none;
 }
 
@@ -87,6 +94,57 @@ header {
 
 .banner>img {
     height: 400px;
+}
+
+header>nav {
+    font-family: 'hkpianpiantibz', sans-serif;
+    color: #222;
+    display: inline-block;
+    position: absolute;
+    z-index: 999;
+    width: 110px;
+    font-size: 10px;
+    margin-top: 70px;
+}
+
+header>nav>a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    font-size: 14px;
+    text-transform: UPPERCASE;
+    transform-origin: 0 0;
+    transform: matrix(1, -0.4, 0, 1.2, 0, 100);
+    padding: 8px 13px;
+    margin-bottom: .4em;
+    transition: .5s background;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+}
+
+header>nav>.home {
+    font-size: 28px;
+    padding-right: 10px;
+}
+
+header>nav>a:nth-of-type(even) {
+    border-right: 3px solid;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+}
+
+header>nav>a:nth-of-type(odd) {
+    border-left: 3px solid;
+}
+
+header>nav>a:hover, nav>a:focus {
+    background: #8b8b8b;
+    color: #fff;
+    box-shadow: inset 100px 0 0 0 #131212;
+    /* border-color: #8b8b8b; */
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
 }
 
 /* 主內容 */
