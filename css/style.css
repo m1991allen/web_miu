@@ -25,7 +25,7 @@ html, body {
 }
 
 main {
-    width: 80%;
+    width: 95%;
     margin: 0 auto;
 }
 
@@ -37,68 +37,47 @@ figure {
     margin: 10px 0;
     cursor: pointer;
     transition: .5s;
-    background: #f2efef;
+    /* background: #f2efef; */
+    color: white;
 }
 
 figure:hover {
     background: #e6e1e1;
+    color: black;
 }
 
 /* 頁首 選單 主視覺 */
 
 header {
-    position: relative;
-}
-
-.menu {
     display: flex;
-    cursor: pointer;
-    color: white;
-    position: absolute;
-    padding: 0 250px;
-    top: 80px;
-    width: 100%;
 }
 
-.menu ul {
-    display: flex;
-    margin: auto;
-    width: 100%;
-    z-index: 9999;
-    padding-inline-start: 0px;
-}
-
-.menu ul .item {
-    flex: auto;
-    border: 1px solid #c7c7c729;
-    text-align: center;
-    list-style: none;
-    width: 120px;
-    line-height: 50px;
-    background: #646464bf;
-    transition: .5s;
-    font-size: 1.2em;
-}
-
-.item::after {
+/* .item::after {
     content: url('../images/small_triangle.png');
-}
+} */
 
-.menu ul .item:hover {
+/* .menu ul .item:hover {
     background: #ffffffc9;
     color: black;
     cursor: pointer;
+} */
+
+.top_video {
+    position: relative;
 }
 
 .banner {
     display: flex;
     justify-content: center;
-    margin: auto;
-    width: 78%;
+    margin: 30px auto 0;
+    width: 90%;
+    height: 90%;
 }
 
-.banner>img {
-    height: 400px;
+/* 首頁上方左側 nav */
+
+.top_menu {
+    margin-top: 80px;
 }
 
 header>nav {
@@ -127,7 +106,7 @@ header>nav>a {
     letter-spacing: 2.5px;
 }
 
-header>nav>a::after {
+header>.top_menu>nav>a::after {
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     content: "\f1b0";
@@ -158,7 +137,75 @@ header>nav>a:hover, nav>a:focus {
     transition: ease-out 0.4s;
 }
 
+/* 首頁上方右側 Share */
+
+.top_share {
+    margin-top: 80px;
+}
+
+header>div>nav>a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    font-size: 14px;
+    text-transform: UPPERCASE;
+    transform-origin: 0 0;
+    transform: matrix(1, -0.4, 0, 1.2, 0, 100);
+    padding: 8px 13px;
+    margin-bottom: .4em;
+    transition: .5s background;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+}
+
+/* header>div>nav>a::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f1b0";
+} */
+
+header>div>nav>.home {
+    font-size: 28px;
+    padding-right: 10px;
+}
+
+header>div>nav>a:nth-of-type(even) {
+    border-right: 3px solid;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+}
+
+header>div>nav>a:nth-of-type(odd) {
+    border-left: 3px solid;
+}
+
+header>div>nav>a:hover, nav>a:focus {
+    background: #8b8b8b;
+    color: #fff;
+    box-shadow: inset 100px 0 0 0 #131212;
+    /* border-color: #8b8b8b; */
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
+}
+
 /* 主內容 */
+
+#about {
+    /*視差卷軸*/
+    background-image: url(../images/new_bg.jpg);
+    background-size: cover;
+    /* 背景全版面覆蓋(拉伸) */
+    background-position: center center;
+    /* 背景定位 */
+    background-attachment: fixed;
+    /* 背景固定 (不會跟著被滑動) */
+    border-radius: 15px;
+    /* opacity: .8;
+    filter: blur(5px); */
+}
+
+/* 水平分隔線 */
 
 .hr_line {
     border-top: 1px solid #bbbbbb;
@@ -198,6 +245,15 @@ header>nav>a:hover, nav>a:focus {
 }
 
 /* layout 與 RWD控制區 end */
+
+.item_name {
+    font-size: 6.5rem;
+    color: #acacac;
+    margin-bottom: 5%;
+    line-height: 1;
+    /* position: relative; */
+    /* z-index: 2; */
+}
 
 .news {
     display: flex;
