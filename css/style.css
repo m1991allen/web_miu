@@ -26,7 +26,7 @@ html, body {
 }
 
 main {
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
 }
 
@@ -38,7 +38,6 @@ figure {
     margin: 10px 0;
     cursor: pointer;
     transition: .5s;
-    background: #f2efef;
 }
 
 figure:hover {
@@ -49,7 +48,7 @@ figure:hover {
 /* 頁首 選單 主視覺 */
 
 header {
-    position: relative;
+    display: flex;
 }
 
 .menu {
@@ -165,6 +164,8 @@ header>nav>a:hover, nav>a:focus {
 
 .top_share {
     margin-top: 80px;
+    position: absolute;
+    right: 0;
 }
 
 header>div>nav>a {
@@ -217,7 +218,7 @@ header>div>nav>a:hover, nav>a:focus {
 
 #about {
     /*視差卷軸*/
-    background-image: url(../images/new_bg.jpg);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.849), rgb(0, 0, 0, .1)), url(../images/cover_photo.jpg);
     background-size: cover;
     /* 背景全版面覆蓋(拉伸) */
     background-position: center center;
@@ -268,6 +269,15 @@ header>div>nav>a:hover, nav>a:focus {
     .main_half, .main_third, .main_third_one, .main_third_two {
         width: 100%;
     }
+}
+
+.top_menu, .top_share {
+    position: absolute;
+    width: 15%;
+}
+
+.top_video {
+    width: 70%;
 }
 
 /* layout 與 RWD控制區 end */
