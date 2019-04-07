@@ -6,67 +6,143 @@
     <meta name="viewport" content="width=device-width , initial-scale=1 , maximum-scale=1" />
     </meta>
     <title>MIU狗便當寵物鮮食</title>
-    <link href="css/miu_layout.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/swiper.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 
 <body>
-    <nav class="guild">
-        <ul>
-            <li><a href="#">首頁</a></li> >
-            <li><a href="#">最新消息</a></li>
-        </ul>
-    </nav>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous"
+        src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v3.2&appId=231535363937338&autoLogAppEvents=1"></script>
+    <!-- 頁首 選單 主視覺 -->
+    <header>
+        <nav role='navigation'>
+            <a href="#" class='home'>Home</a>
+            <a href="#">最新消息</a>
+            <a href="#">關於我們</a>
+            <a href="#">產品介紹</a>
+            <a href="#">合作廠商</a>
+            <a href="#">聯絡我們</a>
+        </nav>
+    </header>
+    <!-- 主內容 -->
     <main>
-        <section id="news">
-            <h2>最新消息</h2>
-            <div class="list">
-                <figure>
-                    <div class="photo_1"></div>
-                    <figcaption>Photo title</figcaption>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+        <!-- 新聞區 -->
+        <div class="layout layout_border">
+            <div class="news">
+                <img style="width:150px;" src="images/news.jpg" alt="news">
+                <figure class="news_item">
+                    <div class="cover_1 news_img_inside"></div>
+                    <div class="content">
+                        <figcaption>瘋狗幫 2019 三月刊</figcaption>
+                        <p>2019.03.13</p>
+                        <p class="ellip">
+                            年前迎新春，健康狗食佛心特惠中年前迎新春，健康狗食佛心特惠中年前迎新春，健康狗食佛心特惠中年前迎新春，健康狗食佛心特惠中年前迎新春，健康狗食佛心特惠中年前迎新春，健康狗食佛心特惠中年前迎新春，健康狗食佛心特惠中年前迎新春，健康狗食佛心特惠中年前迎新春，健康狗食佛心特惠中年前迎新春，健康狗食佛心特惠中，健康狗食佛心特惠中，健康狗食佛心特惠中，健康狗食佛心特惠中，健康狗食佛心特惠中，健康狗食佛心特惠中
+                        </p>
+                        <div class="btn_area">
+                            <button class="btn_more">看更多！</button>
+                        </div>
+                    </div>
                 </figure>
-                <figure>
-                    <div class="photo_2"></div>
-                    <figcaption>Photo title</figcaption>
-                    <p>Lorem ipsum dolor pisicing elit. Enim fugit necessitatibus inventore
-                        consectetur dicta periores errorus.
-                    </p>
+                <figure class="news_item">
+                    <div class="cover_2 news_img_inside"></div>
+                    <div class="content">
+                        <figcaption>瘋狗幫 2019 二月刊</figcaption>
+                        <p>2019.02.28</p>
+                        <p class="ellip">
+                            年前迎新春，健康狗食佛心特惠中年前迎新春，健康狗食佛心特惠中年前迎新春，健康狗食佛心特惠中年前迎新春，健康狗食佛心特惠中年前迎新春，健康狗食佛心特惠中年前迎新春，健康狗食佛心特惠中年前迎新春，健康狗食佛心特惠中年前迎新春，健康狗食佛心特惠中年前迎新春，健康狗食佛心特惠中年前迎新春，健康狗食佛心特惠中，健康狗食佛心特惠中，健康狗食佛心特惠中，健康狗食佛心特惠中，健康狗食佛心特惠中，健康狗食佛心特惠中
+                        </p>
+                        <div class="btn_area">
+                            <button class="btn_more">看更多！</button>
+                        </div>
+                    </div>
                 </figure>
-                <figure>
-                    <div class="photo_3"></div>
-                    <figcaption>Photo title</figcaption>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elitdicta periores.</p>
-
+                <figure class="news_item">
+                    <div class="cover_3 news_img_inside"></div>
+                    <div class="content">
+                        <figcaption>瘋狗幫 2019 一月刊</figcaption>
+                        <p> 2019.01.31</p>
+                        <p class="ellip">
+                            年前迎新春，健康狗食佛心特惠中年前迎新春，健康狗食佛心特惠中年前迎新春，健康狗食佛心特惠中年前迎新春，健康狗食佛心特惠中年前迎新春，健康狗食佛心特惠中年前迎新春，健康狗食佛心特惠中年前迎新春，健康狗食佛心特惠中年前迎新春，健康狗食佛心特惠中年前迎新春，健康狗食佛心特惠中年前迎新春，健康狗食佛心特惠中，健康狗食佛心特惠中，健康狗食佛心特惠中，健康狗食佛心特惠中，健康狗食佛心特惠中，健康狗食佛心特惠中
+                        </p>
+                        <div class="btn_area">
+                            <button class="btn_more">看更多！</button>
+                        </div>
+                    </div>
                 </figure>
+                <figure class="news_item">
+                    <div class="cover_4 news_img_inside"></div>
+                    <div class="content">
+                        <figcaption>瘋狗幫 2018 十二月刊</figcaption>
+                        <p> 2019.01.30</p>
+                        <p class="ellip">
+                            年前迎新春，健康狗食佛心特惠中年前迎新春，健康狗食佛心特惠中年前迎新春，健康狗食佛心特惠中年前迎新春，健康狗食佛心特惠中年前迎新春，健康狗食佛心特惠中年前迎新春，健康狗食佛心特惠中年前迎新春，健康狗食佛心特惠中年前迎新春，健康狗食佛心特惠中年前迎新春，健康狗食佛心特惠中年前迎新春，健康狗食佛心特惠中，健康狗食佛心特惠中，健康狗食佛心特惠中，健康狗食佛心特惠中，健康狗食佛心特惠中，健康狗食佛心特惠中
+                        </p>
+                        <div class="btn_area">
+                            <button class="btn_more">看更多！</button>
+                        </div>
+                    </div>
+                </figure>
+                <figure class="news_item">
+                    <div class="cover_5 news_img_inside"></div>
+                    <div class="content">
+                        <figcaption>狗頭</figcaption>
+                        <p> 2018.12.12</p>
+                        <p class="ellip">
+                            年前迎新春，健康狗食佛心特惠中年前迎新春，健康狗食佛心特惠中年前迎新春，健康狗食佛心特惠中年前迎新春，健康狗食佛心特惠中年前迎新春，健康狗食佛心特惠中年前迎新春，健康狗食佛心特惠中年前迎新春，健康狗食佛心特惠中年前迎新春，健康狗食佛心特惠中年前迎新春，健康狗食佛心特惠中年前迎新春，健康狗食佛心特惠中，健康狗食佛心特惠中，健康狗食佛心特惠中，健康狗食佛心特惠中，健康狗食佛心特惠中，健康狗食佛心特惠中
+                        </p>
+                        <div class="btn_area">
+                            <button class="btn_more">看更多！</button>
+                        </div>
+                    </div>
+                </figure>
+                <div class="btn_area">
+                    <button class="btn_more" onclick="history.back()" value="回到上一頁">上一頁</button>
+                    <button class="btn_more" onclick="history.forward()" value="回到上一頁">下一頁</button>
+                </div>
             </div>
-        </section>
+        </div>
     </main>
-    <!----- 粉專區 ----->
-    <div class="fb">
-        <div class="fb_news">
-            <iframe
-                src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fmiudogfood%2F&tabs=timeline&width=500&height=300&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
-                width="300" height="300" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
-                allowTransparency="true" allow="encrypted-media"></iframe>
-        </div>
-        <div class="video">
-            <iframe width="560" height="300" src="https://www.youtube.com/embed/qCtByDc4LX8" frameborder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
-        </div>
-        <div class="right_button">
-            <div class="item">最新消息</div>
-            <div class="item">關於我們</div>
-            <div class="item">產品介紹</div>
-            <div class="item">合作商店</div>
-            <div class="item">Q&A</div>
-            <div class="item">聯絡我們</div>
-        </div>
-    </div>
-    <!----- footer區 ----->
+
+    <!-- 頁尾 -->
     <footer class="footer">
+        <nav class="menu_bottom">
+            <ul>
+                <li class="item"><i class="fas fa-paw"></i><a href="javascript:void(0);">最新消息</a></li>
+                <li class="item"><i class="fas fa-paw"></i><a href="javascript:void(0);">關於我們</a></li>
+                <li class="item"><i class="fas fa-paw"></i><a href="javascript:void(0);">產品介紹</a></li>
+                <li class="item"><i class="fas fa-paw"></i><a href="javascript:void(0);">合作商店</a></li>
+                <li class="item"><i class="fas fa-paw"></i><a href="javascript:void(0);">Q&A</a></li>
+                <li class="item"><i class="fas fa-paw"></i><a href="javascript:void(0);">聯絡我們</a></li>
+            </ul>
+        </nav>
         Copyright © 2019 miu狗便當 保留一切權利。
     </footer>
+    <script src="js/swiper.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+        //多行字數超過出現省略號
+        $(function () {
+            var len = 200; // 超過50個字以"..."取代
+            $(".ellip").each(function (i) {
+                if ($(this).text().length > len) {
+                    $(this).attr("title", $(this).text());
+                    var text = $(this).text().substring(0, len - 1) + "...";
+                    $(this).text(text);
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
