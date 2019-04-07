@@ -25,7 +25,7 @@ html, body {
     -webkit-text-size-adjust: none;
 }
 
-main {
+main, .top_video {
     width: 70%;
     margin: 0 auto;
 }
@@ -80,10 +80,6 @@ header {
     transition: .5s;
     font-size: 1.2em;
 }
-
-/* .item::after {
-    content: url('../images/small_triangle.png');
-} */
 
 .menu ul .item:hover {
     background: #ffffffc9;
@@ -164,7 +160,6 @@ header>nav>a:hover, nav>a:focus {
 
 .top_share {
     margin-top: 80px;
-    position: absolute;
     right: 0;
 }
 
@@ -182,12 +177,6 @@ header>div>nav>a {
     font-weight: 600;
     letter-spacing: 2.5px;
 }
-
-/* header>div>nav>a::after {
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    content: "\f1b0";
-} */
 
 header>div>nav>.home {
     font-size: 28px;
@@ -276,10 +265,6 @@ header>div>nav>a:hover, nav>a:focus {
     width: 15%;
 }
 
-.top_video {
-    width: 70%;
-}
-
 /* layout 與 RWD控制區 end */
 
 .layout {
@@ -324,8 +309,8 @@ header>div>nav>a:hover, nav>a:focus {
 }
 
 .news_img_inside {
-    width: 250px;
-    height: 140px;
+    width: 100%;
+    height: 243px;
     background-size: cover;
     margin: 10px;
     box-shadow: 1px 2px 3px gray;
