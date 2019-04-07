@@ -15,7 +15,6 @@ body {
     margin: 0;
     padding: 0;
     border: 0;
-    background-color: hsl(49, 97%, 74%);
     background-image: url(../images/bg_img.jpg);
 }
 
@@ -25,9 +24,8 @@ html, body {
     -webkit-text-size-adjust: none;
 }
 
-main, .top_video {
-    width: 70%;
-    margin: 0 auto;
+header {
+    display: flex;
 }
 
 button {
@@ -45,10 +43,20 @@ figure:hover {
     color: black;
 }
 
-/* 頁首 選單 主視覺 */
+/* 主視覺 主選單 header區 */
 
-header {
-    display: flex;
+main, .top_video {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.top_menu, .top_share {
+    position: absolute;
+    width: 10%;
+}
+
+.top_share {
+    right: 0;
 }
 
 .menu {
@@ -156,13 +164,6 @@ header>nav>a:hover, nav>a:focus {
     transition: ease-out 0.4s;
 }
 
-/* 首頁上方右側 Share */
-
-.top_share {
-    margin-top: 80px;
-    right: 0;
-}
-
 header>div>nav>a {
     display: block;
     text-decoration: none;
@@ -203,14 +204,14 @@ header>div>nav>a:hover, nav>a:focus {
     transition: ease-out 0.4s;
 }
 
-/* 主內容 */
+/* 主內容 main */
 
-#about {
+.main_bg {
     /*視差卷軸*/
-    background-image: linear-gradient(rgba(255, 255, 255, 0.849), rgb(0, 0, 0, .1)), url(../images/cover_photo.jpg);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.849), rgb(175, 243, 200, 0.34)), url(../images/cover_photo.jpg);
     background-size: cover;
     /* 背景全版面覆蓋(拉伸) */
-    background-position: center center;
+    background-position: top center;
     /* 背景定位 */
     background-attachment: fixed;
     /* 背景固定 (不會跟著被滑動) */
@@ -219,8 +220,7 @@ header>div>nav>a:hover, nav>a:focus {
     filter: blur(5px); */
 }
 
-/* 水平分隔線 */
-
+// 水平分隔
 .hr_line {
     border-top: 1px solid #bbbbbb;
     margin: 100px auto 0;
@@ -260,13 +260,6 @@ header>div>nav>a:hover, nav>a:focus {
     }
 }
 
-.top_menu, .top_share {
-    position: absolute;
-    width: 15%;
-}
-
-/* layout 與 RWD控制區 end */
-
 .layout {
     width: 100%;
     padding: 70px;
@@ -278,13 +271,12 @@ header>div>nav>a:hover, nav>a:focus {
     border-radius: 10px;
 }
 
+/* layout 與 RWD控制區 end */
+
 .item_name {
-    font-size: 6.5rem;
-    color: #acacac;
-    margin-bottom: 5%;
-    line-height: 1;
-    /* position: relative; */
-    /* z-index: 2; */
+    font-size: 1.8em;
+    padding: 10px;
+    color: #000000;
 }
 
 .news {
@@ -297,7 +289,7 @@ header>div>nav>a:hover, nav>a:focus {
     display: flex;
     align-items: center;
     width: 100%;
-    box-shadow: 2px 3px 12px #8b8b8b;
+    box-shadow: 1px 1px 5px #1313133b;
 }
 
 .news>.news_item>.news_img {
