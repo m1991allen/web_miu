@@ -46,12 +46,13 @@ figure:hover {
 /* 主視覺 主選單 header區 */
 
 main, .top_video {
-    margin: 0 auto;
+    margin: 0 auto 20px;
 }
 
 .top_menu, .top_share {
     position: absolute;
     width: 10%;
+    z-index: 999;
 }
 
 .top_share {
@@ -200,205 +201,13 @@ header>div>nav>a:hover, nav>a:focus {
     transition: ease-out 0.4s;
 }
 
-/* 主內容 main */
-
-/* 首頁main設定 */
-
-.main_index {
-    width: 80%;
-    margin: auto;
-}
-
-.main_bg {
-    /*視差卷軸*/
-    background-image: linear-gradient(rgba(255, 255, 255, 0.849), rgb(175, 243, 200, 0.34)), url(../images/cover_photo.jpg);
-    background-size: cover;
-    /* 背景全版面覆蓋(拉伸) */
-    background-position: top center;
-    /* 背景定位 */
-    background-attachment: fixed;
-    /* 背景固定 (不會跟著被滑動) */
-}
-
-/* layout 與 RWD控制區 */
-
-/* index */
-
-.main_content {
-    display: flex;
-    margin: 10px 0 0;
-}
-
-.main_half {
-    width: 50%;
-}
-
-.main_third {
-    width: 33.3%;
-}
-
-.main_third_one {
-    width: 33.3%;
-    padding: 0 10px;
-}
-
-.main_third_two {
-    width: 66.6%;
-    padding: 0 10px;
-}
-
-@media screen and (max-width:768px) {
-    .main_content {
-        display: block;
-    }
-    .main_half, .main_third, .main_third_one, .main_third_two {
-        width: 100%;
-    }
-}
-
-.layout {
-    width: 100%;
-    padding: 70px;
-    margin: 30px 0;
-}
-
-.layout_border {
-    border: 1px solid #aaaaaa;
-    border-radius: 10px;
-}
-
-/* layout 與 RWD控制區 end */
-
-.item_name {
-    font-size: 1.8em;
-    padding: 10px;
-    color: #000000;
-}
-
-.news {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-}
-
-.news>.news_item {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    box-shadow: 1px 1px 5px #1313133b;
-}
-
-.news>.news_item>.news_img {
-    width: 30%;
-    height: 100px;
-    background-size: cover;
-    margin: 10px;
-    box-shadow: 1px 2px 3px gray;
-}
-
-.news_img_inside {
-    width: 30%;
-    height: 243px;
-    background-size: cover;
-    margin: 10px;
-    box-shadow: 1px 2px 3px gray;
-}
-
-.news>.news_item>.content {
-    padding: 10px 20px;
-    width: 70%;
-}
-
-.news .news_item .cover_1 {
-    background-image: url(../images/news_1.jpg)
-}
-
-.news .news_item .cover_2 {
-    background-image: url(../images/news_2.jpg)
-}
-
-.news .news_item .cover_3 {
-    background-image: url(../images/news_3.jpg)
-}
-
-.news .news_item .cover_4 {
-    background-image: url(../images/news_4.jpg)
-}
-
-.news .news_item .cover_5 {
-    background-image: url(../images/news_5.jpg)
-}
-
-.news .news_item figcaption {
-    font-size: 1.2em;
-    color: #967878;
-}
-
-.news_content {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    width: 99%;
-}
-
-.goods>.goods_item {
-    width: 300px;
-    margin: auto;
-    box-shadow: 2px 3px 12px #8b8b8b;
-}
-
-.goods>#item_title {
-    text-align: center;
-    line-height: 20px;
-    margin-top: 30px;
-    font-size: 1.2em;
-}
-
-/* .vt_line:after {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    border-left: 1px solid #bbbbbb;
-}
-
-.vt_line {
-    width: 10%;
-    position: relative;
-    text-align: center
-} */
-
-.btn_area {
-    width: 100%;
-    margin: 10px 0;
-    text-align: right;
-}
-
-.btn_area .btn_more {
-    width: 100px;
-    line-height: 30px;
-    background-size: 200%;
-    background-color: #ffffff00;
-    transition: .3s;
-    border: 1px solid black;
-    -webkit-transition: ease-out 0.4s;
-    -moz-transition: ease-out 0.4s;
-    transition: ease-out 0.4s;
-}
-
-.btn_area .btn_more:hover {
-    box-shadow: inset 100px 0 0 0 #131212;
-    color: white;
-}
-
 /* 頁尾 */
 
 .footer {
-    background: rgba(182, 182, 182, 0.3);
+    background: #4a4a4a;
     text-align: center;
     line-height: 50px;
+    color: white
 }
 
 .menu_bottom ul {
@@ -452,18 +261,125 @@ header>div>nav>a:hover, nav>a:focus {
     line-height: 30px;
 }
 
-/* pad版 */
+/* layout 與 RWD控制區 */
 
-@media (max-width:1023px) {
-    main .item {
-        width: 45%;
+/* index */
+
+.main_content {
+    display: flex;
+    margin: 10px 0 0;
+}
+
+.main_half {
+    width: 50%;
+}
+
+.main_third {
+    width: 33.3%;
+}
+
+.main_third_one {
+    width: 33.3%;
+    padding: 0 10px;
+}
+
+.main_third_two {
+    width: 66.6%;
+    padding: 0 10px;
+}
+
+@media screen and (max-width:768px) {
+    .main_content {
+        display: block;
+    }
+    .main_half, .main_third, .main_third_one, .main_third_two {
+        width: 100%;
     }
 }
 
-/* 手機版 */
+.layout {
+    width: 100%;
+    padding: 70px;
+    margin: 30px 0;
+}
 
-@media (max-width:500px) {
-    main .item {
-        width: 90%;
-    }
+.layout_border {
+    border: 1px solid #aaaaaa;
+    border-radius: 10px;
+}
+
+/* layout 與 RWD控制區 end */
+
+.news {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.news_img_inside {
+    width: 30%;
+    height: 243px;
+    background-size: cover;
+    margin: 10px;
+    box-shadow: 1px 2px 3px gray;
+}
+
+.news>.news_item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    box-shadow: 1px 1px 5px #1313133b;
+}
+
+.news>.news_item>.content {
+    padding: 10px 20px;
+    width: 70%;
+}
+
+.news .news_item .cover_1 {
+    background-image: url(../images/news_1.jpg)
+}
+
+.news .news_item .cover_2 {
+    background-image: url(../images/news_2.jpg)
+}
+
+.news .news_item .cover_3 {
+    background-image: url(../images/news_3.jpg)
+}
+
+.news .news_item .cover_4 {
+    background-image: url(../images/news_4.jpg)
+}
+
+.news .news_item .cover_5 {
+    background-image: url(../images/news_5.jpg)
+}
+
+.news .news_item figcaption {
+    font-size: 1.2em;
+    color: #967878;
+}
+
+.btn_area {
+    width: 100%;
+    margin: 10px 0;
+    text-align: right;
+}
+
+.btn_area .btn_more {
+    width: 100px;
+    line-height: 30px;
+    background-size: 200%;
+    background-color: #ffffff00;
+    transition: .3s;
+    border: 1px solid black;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
+}
+
+.btn_area .btn_more:hover {
+    box-shadow: inset 100px 0 0 0 #131212;
+    color: white;
 }
