@@ -50,6 +50,12 @@ h2 {
     line-height: 0px;
 }
 
+h3 {
+    /* 日期標題 */
+    font-size: 1.6em;
+    text-align: right;
+}
+
 .news h2, .product h2 {
     text-align: center;
 }
@@ -58,6 +64,17 @@ h2 {
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     content: "\f1b0";
+}
+
+.page_title h3:nth-last-child(1) {
+    font-size: 1.2em;
+    color: #b7a8a8;
+}
+
+.page_title h3:nth-last-child(1)::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f073";
 }
 
 /* 主視覺 主選單 header區 */
@@ -699,4 +716,98 @@ header>div>nav>a:hover, nav>a:focus {
     position: absolute;
     left: -400px;
     z-index: 1;
+}
+
+/* news_page */
+
+.page_title {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+@media screen and (max-width:768px) {
+    .page_title {
+        display: block;
+    }
+    .page_title h3:nth-child(1) {
+        text-align: left;
+    }
+}
+
+.page_subtitle {
+    text-align: center;
+    font-size: 1.6em;
+    border-top: 1px dashed #aaaaaa;
+    padding-top: 50px;
+}
+
+.page_layout {
+    width: 100%;
+    display: flex;
+    padding: 5% 0;
+    border-top: 4px double #aaaaaa;
+}
+
+.page_text {
+    width: 60%;
+}
+
+.page_img {
+    width: 40%;
+}
+
+@media screen and (max-width:768px) {
+    .page_layout {
+        display: block;
+    }
+    .page_text {
+        width: 100%;
+    }
+    .page_img {
+        width: 100%;
+    }
+}
+
+.page_img img {
+    width: 100%;
+    box-shadow: 1px 2px 3px gray;
+}
+
+.page_video {
+    width: 100%;
+    padding-bottom: 5%;
+}
+
+.page_video iframe {
+    width: 100%;
+    box-shadow: 1px 2px 3px gray;
+}
+
+.page_relation {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.page_relation figure {
+    flex: 0 0 24%;
+    margin: 10px auto;
+}
+
+.page_relation figure img {
+    width: 220px;
+    box-shadow: 1px 2px 3px gray;
+    cursor: pointer;
+    opacity: .7;
+    transition: .7s
+}
+
+.page_relation figure img:hover {
+    opacity: 1;
+    background: #00000000 !important;
+}
+
+.page_relation figure:hover {
+    opacity: 1;
+    background: #00000000 !important;
 }
