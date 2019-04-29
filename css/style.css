@@ -325,15 +325,6 @@ header>div>nav>a:hover, nav>a:focus {
     color: white
 }
 
-/* @media screen and (max-width:768px) {
-    .footer {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        line-height: 30px;
-    }
-} */
-
 .menu_bottom ul {
     width: 80%;
     list-style: none;
