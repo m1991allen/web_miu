@@ -1457,3 +1457,7 @@ h1 div {
         text-decoration: none;
     }
 }
+
+.no_bottom {
+    padding-bottom: 0px;
+}
