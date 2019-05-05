@@ -82,7 +82,8 @@ h3 {
     margin: auto;
     position: absolute;
     width: 30%;
-    right: 0;
+    right: 1%;
+    top: 25%;
     z-index: 99;
 }
 
