@@ -28,7 +28,7 @@ header {
     display: flex;
 }
 
-button {
+button, a {
     cursor: pointer;
 }
 
@@ -56,11 +56,11 @@ h3 {
     text-align: right;
 }
 
-.news h2, .product h2 {
+.news h2, .product h2, .contact h2 {
     text-align: center;
 }
 
-.news h2::before, .product h2::before {
+.news h2::before, .product h2::before, .contact h2::before {
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     content: "\f1b0";
@@ -83,20 +83,14 @@ h3 {
 
 /* 主視覺 主選單 header區 */
 
-h1.logo_text {
-    line-height: 10px;
-    margin-block-start: 0;
+main {
+    width: 70%;
 }
 
 @media screen and (max-width:768px) {
-    h1.logo_text {
-        line-height: normal;
-        margin-block-start: 0.67em;
+    main {
+        width: 90%;
     }
-}
-
-main {
-    width: 70%;
 }
 
 main, .top_video {
@@ -110,7 +104,12 @@ main, .top_video {
 
 .top_menu, .top_share {
     position: fixed;
+    width: 160px;
     z-index: 999;
+}
+
+.top_menu nav a {
+    /* padding: 20%; */
 }
 
 .top_share {
@@ -348,6 +347,7 @@ header>div>nav>a:hover, nav>a:focus {
 }
 
 .top_menu_moblie .top_menu_relative p {
+    font-weight: 900;
     position: absolute;
     text-align: center;
     left: 27%;
@@ -811,6 +811,12 @@ header>div>nav>a:hover, nav>a:focus {
     margin: 70px auto 80px;
 }
 
+@media screen and (max-width:768px) {
+    .section {
+        max-width: 100%;
+    }
+}
+
 .section h1 {
     position: relative;
     margin-top: -14px;
@@ -1018,8 +1024,20 @@ header>div>nav>a:hover, nav>a:focus {
 }
 
 .ct_bt_left {
-    /* flex: 1; */
     width: 80%;
+}
+
+.ct_bt_left ul {
+    text-align: left;
+}
+
+.ct_bt_left ul li {
+    width: 200px;
+}
+
+.ct_bt_left_social {
+    display: flex;
+    list-style-type: none;
 }
 
 .ct_bt_right {
@@ -1029,6 +1047,7 @@ header>div>nav>a:hover, nav>a:focus {
 .ct_bt_right span {
     position: relative;
     bottom: -26px;
+    right: 50%;
 }
 
 .contact_bottom img {
@@ -1052,11 +1071,11 @@ header>div>nav>a:hover, nav>a:focus {
 .section a {
     outline: 0;
     display: inline-block;
-    padding: 20px;
-    margin-bottom: 40px;
-    width: 440px;
+    /* padding: 20px; */
+    /* margin-bottom: 40px; */
+    /* width: 440px; */
     max-width: 80%;
-    background-color: #333;
+    /* background-color: #333; */
     color: #fff;
     font-size: 22px;
     letter-spacing: 3px;
@@ -1111,13 +1130,16 @@ header>div>nav>a:hover, nav>a:focus {
         height: auto;
     }
     .ct_bt_left {
-        width: auto;
+        width: 100%;
     }
     .ct_bt_right {
-        width: auto;
+        width: 100%;
     }
     .ct_bt_right span {
         right: auto;
+    }
+    .ct_bt_left_social {
+        display: block;
     }
 }
 
