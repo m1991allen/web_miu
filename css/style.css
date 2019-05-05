@@ -32,6 +32,11 @@ button, a {
     cursor: pointer;
 }
 
+a {
+    color: #000;
+    text-decoration: none !important;
+}
+
 figure {
     margin: 10px 0;
     cursor: pointer;
@@ -68,7 +73,7 @@ h3 {
 
 .page_title h3:nth-last-child(1) {
     font-size: 1.2em;
-    color: #b7a8a8;
+    color: #967878;
 }
 
 .page_title h3:nth-last-child(1)::after {
@@ -114,7 +119,7 @@ main {
 }
 
 main, .top_video {
-    margin: 0 auto 20px;
+    margin: 0 auto;
 }
 
 .top_video img {
@@ -181,6 +186,7 @@ main, .top_video {
 @media screen and (max-width:768px) {
     .top_video {
         width: auto;
+        margin-top: 5%;
     }
     .top_video img {
         display: none;
@@ -395,6 +401,7 @@ header>div>nav>a:hover, nav>a:focus {
     text-decoration: none;
     opacity: 1;
     transition: .7s;
+    font-size: 1.2em;
 }
 
 /* 頁尾 */
@@ -1264,4 +1271,101 @@ header>div>nav>a:hover, nav>a:focus {
 .page_relation figure:hover {
     opacity: 1;
     background: #00000000 !important;
+}
+
+/* mobile_menu */
+
+#menu {
+    display: none;
+}
+
+@media screen and (max-width:768px) {
+    #menu {
+        display: block;
+    }
+    #burger-menu {
+        cursor: pointer;
+        overflow: visible;
+        position: relative;
+        z-index: 999;
+    }
+    #burger-menu span, #burger-menu span:before, #burger-menu span:after {
+        background: #967878;
+        display: block;
+        height: 4px;
+        opacity: 1;
+        position: absolute;
+        transition: 0.3s ease-in-out;
+    }
+    #burger-menu span:before, #burger-menu span:after {
+        content: "";
+    }
+    #burger-menu span {
+        right: 30px;
+        top: 45px;
+        width: 30px;
+        border-radius: 10px;
+        position: fixed;
+    }
+    #burger-menu span:before {
+        right: 0px;
+        top: -10px;
+        width: 20px;
+        border-radius: 10px;
+    }
+    #burger-menu span:after {
+        right: 0px;
+        top: 10px;
+        width: 26px;
+        border-radius: 10px;
+    }
+    #burger-menu.close span {
+        transform: rotate(-45deg);
+        right: 30px;
+        top: 45px;
+        width: 30px;
+        background: white;
+    }
+    #burger-menu.close span:before {
+        top: 0px;
+        transform: rotate(90deg);
+        width: 30px;
+        background: white;
+    }
+    #burger-menu.close span:after {
+        top: 0px;
+        left: 0;
+        transform: rotate(90deg);
+        opacity: 0;
+        width: 0;
+    }
+    #menu {
+        z-index: 1;
+        min-width: 100%;
+        min-height: 100%;
+        position: fixed;
+        top: 0;
+        height: 0;
+        visibility: hidden;
+        opacity: 0;
+        text-align: center;
+        padding-top: 20px;
+        transition: all 0.3s ease-in-out;
+    }
+    #menu.overlay {
+        visibility: visible;
+        opacity: 1;
+        padding-top: 100px;
+        background: rgba(0, 0, 0, 0.5);
+    }
+    #menu li {
+        list-style: none;
+    }
+    #menu a {
+        color: #fff;
+        display: block;
+        font-size: 32px;
+        margin-bottom: 30px;
+        text-decoration: none;
+    }
 }

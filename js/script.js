@@ -1,5 +1,6 @@
-//文字超過省略
+
 $(function () {
+    //文字超過省略
     var len = 200; // 超過50個字以"..."取代
     $(".ellip").each(function (i) {
         if ($(this).text().length > len) {
@@ -8,10 +9,8 @@ $(function () {
             $(this).text(text);
         }
     })
-});
 
-//slide fixed/
-$(function () {
+    //slide fixed/
     $(window).scroll(function () {
         let scrollVal = $(this).scrollTop();
         if (scrollVal > 100) {
@@ -20,11 +19,8 @@ $(function () {
 
         }
     })
-});
 
-//contact/
-
-$(function () {
+    //contact/
     //material contact form
     $('.contact-form').find('.form-control').each(function () {
         var targetItem = $(this).parent();
@@ -51,51 +47,21 @@ $(function () {
             }, 300);
         }
     })
-})
 
-// about
-$(document).ready(function () {
-    $("#box1 .colorLayer").animate({ left: "0px" }, 300);
-    $("#box1 .colorLayer").delay(400).animate({ left: "120px" }, 300);
-    $("#box1 .title").animate({ left: "0px" }, 300);
-
-    $("#box2 .colorLayer").delay(1000).animate({ left: "0px" }, 300);
-    $("#box2 .colorLayer").delay(300).animate({ left: "270px" }, 300);
-    $("#box2 .title").delay(1000).animate({ left: "0px" }, 300);
+    // about
 
 
-    $(".colorLayer2").delay(2300).animate({ left: "0px" }, 300);
-    $("#box3 .image img").delay(2300).animate({ left: "0px" });
-    $(".colorLayer2").delay(300).animate({ left: "400px" }, 300);
-    $(".colorLayer2").delay(300).animate({ width: "0px" }, 300);
+
+    // menu_mobile
+    var burgerMenu = document.getElementById('burger-menu');
+    var overlay = document.getElementById('menu');
+    burgerMenu.addEventListener('click', function () {
+        this.classList.toggle("close");
+        overlay.classList.toggle("overlay");
+    });
 
 
-    $(".colorLayer3").delay(3500).animate({ left: "0px" }, 300);
-    $("#box4 .info").delay(3500).animate({ left: "0px" });
-    $(".colorLayer3").delay(300).animate({ left: "400px" }, 300);
-    $(".colorLayer3").delay(300).animate({ width: "0px" }, 300);
-
-
-    $(window).scroll(function () {
-
-        if ($(this).scrollTop() >= 150 && $(this).scrollTop() <= 400) {
-
-            $(".colorLayer4").delay(600).animate({ left: "0px" }, 300);
-            $("#box5 .info").delay(600).animate({ left: "0px" });
-            $(".colorLayer4").delay(300).animate({ left: "400px" }, 300);
-            $(".colorLayer4").delay(300).animate({ width: "0px" }, 300);
-
-            $(".colorLayer5").delay(1800).animate({ left: "0px" }, 300);
-            $("#box6 .image img").delay(1800).animate({ left: "0px" });
-            $(".colorLayer5").delay(300).animate({ left: "850px" }, 300);
-            $(".colorLayer5").delay(300).animate({ width: "0px" }, 300);
-        }
-    })
 });
-
-
-
-
 
 
 
