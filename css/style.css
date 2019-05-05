@@ -77,8 +77,27 @@ h3 {
     content: "\f073";
 }
 
+.logo_mb {
+    display: none;
+    margin: auto;
+    position: absolute;
+    width: 30%;
+    right: 0;
+    z-index: 99;
+}
+
+.logo_mb img {
+    width: 100%;
+}
+
 .logo_text {
     text-align: center;
+}
+
+@media screen and (max-width:768px) {
+    .logo_mb {
+        display: block;
+    }
 }
 
 /* 主視覺 主選單 header區 */
@@ -161,6 +180,9 @@ main, .top_video {
 @media screen and (max-width:768px) {
     .top_video {
         width: auto;
+    }
+    .top_video img {
+        display: none;
     }
 }
 
