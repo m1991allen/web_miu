@@ -83,6 +83,18 @@ h3 {
 
 /* 主視覺 主選單 header區 */
 
+h1.logo_text {
+    line-height: 10px;
+    margin-block-start: 0;
+}
+
+@media screen and (max-width:768px) {
+    h1.logo_text {
+        line-height: normal;
+        margin-block-start: 0.67em;
+    }
+}
+
 main {
     width: 70%;
 }
@@ -94,16 +106,15 @@ main, .top_video {
 .top_video img {
     position: absolute;
     width: 100%;
-    margin-top: 20px;
 }
 
 .top_menu, .top_share {
-    position: absolute;
-    width: 10%;
+    position: fixed;
     z-index: 999;
 }
 
 .top_share {
+    position: fixed;
     right: 0;
 }
 
@@ -145,20 +156,26 @@ main, .top_video {
 
 .top_video {
     position: relative;
+    width: 80%;
+}
+
+@media screen and (max-width:768px) {
+    .top_video {
+        width: auto;
+    }
 }
 
 .banner {
     display: flex;
     justify-content: center;
-    margin: 30px auto 0;
-    width: 90%;
+    margin: 0 auto 0;
+    width: 98%;
     height: 90%;
 }
 
 @media screen and ( max-width:768px) {
     .banner {
-        margin: 23px auto 0;
-        width: 86%;
+        margin: auto;
         height: 90%;
     }
 }
@@ -177,7 +194,6 @@ header>nav {
     display: inline-block;
     position: absolute;
     z-index: 999;
-    /* width: 110px; */
     font-size: 10px;
     margin-top: 70px;
 }
@@ -259,7 +275,6 @@ header>div>nav>a:hover, nav>a:focus {
     background: #8b8b8b;
     color: #fff;
     box-shadow: inset 100px 0 0 0 #131212;
-    /* border-color: #8b8b8b; */
     -webkit-transition: ease-out 0.4s;
     -moz-transition: ease-out 0.4s;
     transition: ease-out 0.4s;
@@ -284,29 +299,72 @@ header>div>nav>a:hover, nav>a:focus {
     }
 }
 
-.top_menu_moblie div {
+.top_menu_moblie>div {
     width: 50%;
 }
 
 .top_menu_moblie .menu_mobile_1 {
-    background-color: #ff7b7b;
+    background-image: url(../images/m1.jpg);
+    background-size: cover;
+    opacity: .5;
     width: 95%;
     height: 210px;
     margin: auto;
+    cursor: pointer;
+    transition: .5s;
+    box-shadow: 1px 1px 5px #1313133b;
 }
 
 .top_menu_moblie .menu_mobile_2 {
-    background-color: #7bff8f;
+    background-image: url(../images/m2.jpg);
+    background-size: cover;
+    opacity: .5;
     width: 95%;
     height: 100px;
-    margin: auto;
+    margin: 0 auto 10px;
+    cursor: pointer;
+    transition: .5s;
+    box-shadow: 1px 1px 5px #1313133b;
 }
 
 .top_menu_moblie .menu_mobile_3 {
-    background-color: #7b9eff;
+    background-image: url(../images/m3.jpg);
+    background-size: cover;
+    opacity: .5;
     width: 95%;
     height: 100px;
     margin: auto;
+    cursor: pointer;
+    transition: .5s;
+    box-shadow: 1px 1px 5px #1313133b;
+}
+
+.top_menu_moblie .menu_mobile_1:hover, .top_menu_moblie .menu_mobile_2:hover, .top_menu_moblie .menu_mobile_3:hover {
+    opacity: 1;
+}
+
+.top_menu_moblie .top_menu_relative {
+    position: relative;
+}
+
+.top_menu_moblie .top_menu_relative p {
+    position: absolute;
+    text-align: center;
+    left: 27%;
+    top: 31%;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.top_menu_moblie .top_menu_relative:hover p {
+    color: white;
+    cursor: pointer;
+}
+
+.top_menu_moblie .top_menu_sub p {
+    top: 10%;
+    font-size: 1.2em;
+    text-align: center;
 }
 
 .social_contact a {
@@ -375,8 +433,6 @@ header>div>nav>a:hover, nav>a:focus {
     font-size: 1.2em;
     line-height: 30px;
 }
-
-/* layout 與 RWD控制區 */
 
 /* index */
 
@@ -506,7 +562,7 @@ header>div>nav>a:hover, nav>a:focus {
     transition: ease-out 0.4s;
 }
 
-.btn_area .btn_more:hover {
+.btn_area a .btn_more:hover {
     box-shadow: inset 100px 0 0 0 #131212;
     color: white;
 }
@@ -552,13 +608,8 @@ header>div>nav>a:hover, nav>a:focus {
 .go_shop {
     height: 100%;
     display: flex;
-    /* background: #fffafa; */
     transition: .5s;
 }
-
-/* .go_shop:hover {
-    background: #cec8c8;
-} */
 
 .go_shop span {
     align-content: center;
@@ -576,39 +627,10 @@ header>div>nav>a:hover, nav>a:focus {
     }
 }
 
-/* swiper */
-
-.swiper-container {
-    width: 100%;
-    height: 100%;
-}
-
-.swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-    /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-}
-
 /* about */
-
-/* about關於我區 */
 
 .about {
     display: flex;
-    /* flex: 2; */
     align-items: center;
     position: relative;
     width: 100%;
@@ -647,7 +669,6 @@ header>div>nav>a:hover, nav>a:focus {
 #box1 .colorLayer {
     height: 77px;
     width: 120px;
-    /* background: url(../images/bg_img.jpg); */
     background: #000;
     position: absolute;
     left: -120px;
@@ -657,7 +678,6 @@ header>div>nav>a:hover, nav>a:focus {
 #box2 .colorLayer {
     height: 77px;
     width: 270px;
-    /* background: url(../images/bg_img.jpg); */
     background-color: #fff;
     position: absolute;
     left: -270px;
@@ -671,7 +691,6 @@ header>div>nav>a:hover, nav>a:focus {
     width: 400px;
     position: absolute;
     top: 39%;
-    /* margin-left: 200px; */
     transform: translateY(-50%);
     overflow: hidden;
 }
@@ -697,7 +716,6 @@ header>div>nav>a:hover, nav>a:focus {
     width: 400px;
     position: absolute;
     top: 34%;
-    /* right: 0%; */
     margin-left: 300px;
     transform: translateY(-50%);
     overflow: hidden;
@@ -713,9 +731,6 @@ header>div>nav>a:hover, nav>a:focus {
 }
 
 #box4 .info {
-    /* height: 320px;
-    width: 320px; */
-    /* font-family: monospace; */
     font-size: 22px;
     line-height: 45px;
     color: #2D2D2D;
@@ -733,7 +748,6 @@ header>div>nav>a:hover, nav>a:focus {
     width: 400px;
     position: absolute;
     top: 82%;
-    /* margin-left: 150px; */
     right: 20%;
     transform: translateY(-50%);
     overflow: hidden;
@@ -749,9 +763,6 @@ header>div>nav>a:hover, nav>a:focus {
 }
 
 #box5 .info {
-    /* height: 320px;
-    width: 320px; */
-    /* font-family: monospace; */
     font-size: 22px;
     line-height: 45px;
     color: #2D2D2D;
@@ -768,7 +779,6 @@ header>div>nav>a:hover, nav>a:focus {
     position: absolute;
     top: 83%;
     left: 70%;
-    /* margin-left: 420px; */
     transform: translateY(-50%);
     overflow: hidden;
 }
@@ -787,6 +797,334 @@ header>div>nav>a:hover, nav>a:focus {
     position: absolute;
     left: -400px;
     z-index: 1;
+}
+
+/* contact */
+
+.section {
+    position: relative;
+    width: 900px;
+    max-width: 80%;
+    border: 2px solid #333;
+    border-top: none;
+    text-align: center;
+    margin: 70px auto 80px;
+}
+
+.section h1 {
+    position: relative;
+    margin-top: -14px;
+    display: inline-block;
+    letter-spacing: 4px;
+}
+
+.section .top-border {
+    position: absolute;
+    height: 2px;
+    width: 24%;
+    background-color: #333;
+}
+
+.section .right {
+    right: 0;
+}
+
+.section .left {
+    left: 0;
+}
+
+.wrap {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.box {
+    font-size: 1.2em;
+    line-height: 1.6em;
+    text-align: center;
+}
+
+/*screen resolutions lower than 620px*/
+
+@media all and (max-width: 1180px) {
+    .wrap {
+        width: 100%;
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+    }
+}
+
+#forms h2 {
+    margin-bottom: 50px;
+    position: relative;
+    display: block;
+}
+
+#forms p a {
+    color: #00B16A;
+    text-decoration: none;
+}
+
+#forms .wrap {
+    text-align: center;
+    width: 100%;
+}
+
+#forms .box {
+    text-align: center;
+    margin: 5% 0 0 0;
+    width: 100%;
+}
+
+.contact-form {
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.contact-form .input-block {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    height: 60px;
+    border-bottom: 2px solid #aaaaaa;
+    margin: 0;
+    position: relative;
+    margin-bottom: 20px;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.contact-form .input-block.focus {}
+
+.contact-form .input-block.textarea {
+    height: auto;
+}
+
+.contact-form .input-block.textarea .form-control {
+    height: auto;
+    resize: none;
+}
+
+.contact-form .input-block label {
+    position: absolute;
+    left: 10px;
+    top: 25px;
+    display: block;
+    margin: 0;
+    font-weight: 400;
+    z-index: 1;
+    color: #aaa;
+    font-size: 18px;
+    line-height: 10px;
+}
+
+.contact-form .input-block .form-control {
+    background-color: transparent;
+    margin: 0;
+    outline: none;
+    border: none;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    height: auto;
+    padding: 30px 10px;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    font-size: 18px;
+    color: #333;
+}
+
+.contact-form .input-block .form-control:focus label {
+    top: 0;
+}
+
+.contact-form .square-button {
+    background-color: #00B16A;
+    color: #fff;
+    font-size: 26px;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    padding: 0 60px;
+    height: 60px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    width: 100%;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.contact-form .square-button:hover, .contact-form .square-button:focus {
+    background-color: #66CC99;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
+}
+
+/*----page styles---*/
+
+.contact-wrap {
+    padding: 15px;
+    /* background: #ecf0f1; */
+}
+
+.contact-wrap h1 {
+    background-color: white;
+    color: #ff7c62;
+    padding: 40px;
+    margin: 0 0 50px;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+}
+
+.contact-wrap h1 small {
+    font-size: 18px;
+    display: block;
+    text-transform: none;
+    font-weight: 300;
+    margin-top: 10px;
+    color: #ff7c62;
+}
+
+.contact_bottom {
+    display: flex;
+    height: 105px;
+    width: 100%;
+    align-items: flex-end;
+    position: relative;
+}
+
+.ct_bt_left {
+    /* flex: 1; */
+    width: 80%;
+}
+
+.ct_bt_right {
+    width: 20%;
+}
+
+.ct_bt_right span {
+    position: relative;
+    bottom: -26px;
+}
+
+.contact_bottom img {
+    height: 200px;
+    /* margin-bottom: -30px; */
+}
+
+@media (max-width: 685px) {
+    .top-border {
+        width: 18%;
+    }
+}
+
+.section p {
+    width: 72%;
+    margin: 20px auto 20px auto;
+    line-height: 30px;
+    text-align: justify;
+}
+
+.section a {
+    outline: 0;
+    display: inline-block;
+    padding: 20px;
+    margin-bottom: 40px;
+    width: 440px;
+    max-width: 80%;
+    background-color: #333;
+    color: #fff;
+    font-size: 22px;
+    letter-spacing: 3px;
+    transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+}
+
+.section a:hover {
+    background-color: #1D222D;
+}
+
+.section a:link, .section a:visited, .section a:link:hover, .section a:visited:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+@media (max-width: 500px) {
+    .top-border {
+        display: none;
+    }
+    .section {
+        border-top: 2px solid #333;
+    }
+    .section h1 {
+        margin: 20px 6px;
+    }
+}
+
+@media (min-width: 768px) {
+    .contact-wrap {
+        margin: auto;
+    }
+}
+
+@media (max-width: 868px) {
+    .section h1 {
+        font-size: 1.6em;
+    }
+    .section .top-border {
+        width: 11%;
+    }
+    .contact-form {
+        width: 100%;
+        padding: 40px;
+    }
+    .contact_bottom {
+        flex-direction: column;
+        position: relative;
+        align-items: center;
+        /* padding-left: 20px; */
+        height: auto;
+    }
+    .ct_bt_left {
+        width: auto;
+    }
+    .ct_bt_right {
+        width: auto;
+    }
+    .ct_bt_right span {
+        right: auto;
+    }
+}
+
+@media (max-width: 568px) {
+    .contact-form {
+        padding: 10px;
+    }
 }
 
 /* news_page */
