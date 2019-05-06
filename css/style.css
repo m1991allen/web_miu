@@ -298,7 +298,12 @@ header>div>nav>a:nth-of-type(even) {
 
 header>div>nav>a:nth-of-type(odd) {
     border-left: 3px solid;
+    border-bottom: 1px solid;
 }
+
+/* header>div>nav>a:nth-of-type(4) {
+    border-bottom: none;
+} */
 
 header>div>nav>a:hover, nav>a:focus {
     background: #8b8b8b;
@@ -667,7 +672,7 @@ header>div>nav>a:hover, nav>a:focus {
     max-width: 100%;
     opacity: .9;
     height: 628px;
-    filter: blur(1px);
+    /* filter: blur(1px); */
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -675,7 +680,7 @@ header>div>nav>a:hover, nav>a:focus {
 }
 
 .about_title {
-    font-size: 1.8em;
+    font-size: 4.8em;
     color: #fff;
     padding-left: 110px;
     padding-top: 120px;
@@ -720,6 +725,7 @@ header>div>nav>a:hover, nav>a:focus {
 
 .vision .vision_content {
     display: flex;
+    margin-bottom: 100px;
 }
 
 .vision_con {
@@ -773,7 +779,8 @@ hr {
     display: flex;
     height: 350px;
     margin-left: 70px;
-    margin-bottom: 100px;
+    margin-bottom: 120px;
+    margin-top: 100px;
 }
 
 .content_ltor img {
@@ -782,11 +789,15 @@ hr {
     background-size: cover;
 }
 
+.plus_miuon {
+    display: none;
+}
+
 .content_rtol {
     display: flex;
     justify-content: flex-end;
     margin-right: 70px;
-    margin-bottom: 100px;
+    /* margin-bottom: 100px; */
 }
 
 .content_rtol img {
@@ -795,8 +806,8 @@ hr {
 }
 
 h1 {
-    margin-top: 3%;
-    margin-bottom: 7%;
+    margin-top: 6%;
+    margin-bottom: 6%;
     text-align: center;
     font-size: 40px;
 }
@@ -940,6 +951,9 @@ h1 div {
         height: auto;
         margin-right: 0px;
     }
+    .plus_miuon {
+        display: none;
+    }
     #imgstack {
         width: 100%;
         height: 300px;
@@ -969,6 +983,69 @@ h1 div {
         margin-top: 600px;
         margin-left: 50px;
     }
+}
+
+@media screen and (min-width:1666px) {
+    .about_title {
+        font-size: 6.8em;
+        color: #fff;
+        padding-left: 110px;
+        padding-top: 120px;
+    }
+    .vision_con img {
+        width: 250px;
+    }
+    .content_ltor, .content_rtol {
+        align-items: center;
+    }
+    .intro_con_half {
+        width: 30%;
+        margin-top: 70px;
+        margin-bottom: 70px;
+    }
+    .intro_con_half:nth-of-type(2) {
+        width: 25%;
+    }
+    .plus_miuon {
+        display: flex;
+        width: 35%;
+    }
+    /* #line_left {
+        border-bottom: 1px solid #aaaaaa;
+        width: 25%;
+        margin-left: -20px;
+    } */
+    #imgstack:hover a:first-of-type {
+        margin-left: -380px;
+        margin-top: 5px;
+    }
+    #imgstack:hover a:nth-of-type(2) {
+        margin-top: -5px;
+    }
+    #imgstack:hover a:last-of-type {
+        margin-left: 370px;
+        margin-top: 5px;
+    }
+    /* 分隔線----------------------- */
+    .or-spacer {
+        margin: 60px auto;
+        width: 400px;
+        position: relative;
+    }
+    .or-spacer .mask {
+        overflow: hidden;
+        height: 20px;
+    }
+    .or-spacer .mask:after {
+        content: '';
+        display: block;
+        margin: -25px auto 0;
+        width: 100%;
+        height: 25px;
+        border-radius: 125px / 12px;
+        box-shadow: 0 0 8px black;
+    }
+    /* 分隔線 END------------------- */
 }
 
 /*screen resolutions lower than 620px*/
