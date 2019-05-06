@@ -8,7 +8,9 @@
     <title>MIU狗便當寵物鮮食</title>
     <link rel="icon" href="images/favicon.png">
     <link href="css/style.css" rel="stylesheet" type="text/css">
-    <link href="css/swiper.css" rel="stylesheet" type="text/css">
+    <!-- fancybox -->
+    <link rel="stylesheet" href="css/fancybox/jquery.fancybox.css">
+    <link rel="stylesheet" href="css/fancybox/jquery.fancybox-buttons.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
@@ -27,8 +29,8 @@
         </div>
         <div class="top_share">
             <nav role='navigation'>
-                <a href="https://is.gd/GnELRW">臉書 <i class="fab fa-facebook-square"></i></a>
-                <a href="https://is.gd/zAoSwB">&nbspIG&nbsp <i class="fab fa-instagram"></i></a>
+                <a href="https://is.gd/GnELRW">Facebook <i class="fab fa-facebook-square"></i></a>
+                <a href="https://is.gd/zAoSwB">instagram <i class="fab fa-instagram"></i></a>
                 <a href="#">Line <i class="fab fa-line"></i></a>
             </nav>
         </div>
@@ -53,31 +55,34 @@
             <div class="product">
                 <h2> Products</h2>
                 <div class="goods">
-                    <figure class="goods_item">
-                        <div class="goods_img"><img src="images/f1.jpg" alt=""></div>
+                    <figure class="goods_item fancybox" rel="group" href="images/f1.jpg" title="雞胸肉">
+                        <div class="goods_img"><img src="images/f1.jpg" alt="雞胸肉"></div>
                         <figcaption>雞胸肉</figcaption>
                     </figure>
-                    <figure class="goods_item">
-                        <div class="goods_img"><img src="images/f2.jpg" alt=""></div>
+                    <figure class="goods_item fancybox" rel="group" href="images/f2.jpg" title="虱目魚">
+                        <div class="goods_img"><img src="images/f2.jpg" alt="虱目魚"></div>
                         <figcaption>虱目魚</figcaption>
                     </figure>
-                    <figure class="goods_item">
-                        <div class="goods_img"><img src="images/f3.jpg" alt=""></div>
+                    <figure class="goods_item fancybox" rel="group" href="images/f3.jpg" title="豬耳朵">
+                        <div class="goods_img"><img src="images/f3.jpg" alt="豬耳朵"></div>
                         <figcaption>豬耳朵</figcaption>
                     </figure>
-                    <figure class="goods_item">
-                        <div class="goods_img"><img src="images/f4.jpg" alt=""></div>
+                    <figure class="goods_item fancybox" rel="group" href="images/f4.jpg" title="牛肉乾">
+                        <div class="goods_img"><img src="images/f4.jpg" alt="牛肉乾"></div>
                         <figcaption>牛肉乾</figcaption>
                     </figure>
-                    <figure class="goods_item">
-                        <div class="goods_img"><img src="images/f5.jpg" alt=""></div>
+                    <figure class="goods_item fancybox" rel="group" href="images/f5.jpg" title="雞骨粉">
+                        <div class="goods_img"><img src="images/f5.jpg" alt="雞骨粉"></div>
                         <figcaption>雞骨粉</figcaption>
                     </figure>
                     <figure class="goods_item">
-                        <div class="go_shop">
-                            <span><img src="images/shopee_seeklogo_b.svg" alt="">
-                                <p>來去逛逛</p>
-                            </span></div>
+                        <a href="https://shopee.tw/carahu">
+                            <div class="go_shop">
+                                <span><img src="images/shopee_seeklogo_b.svg" alt="">
+                                    <p>來去逛逛</p>
+                                </span>
+                            </div>
+                        </a>
                     </figure>
                 </div>
             </div>
@@ -89,7 +94,10 @@
         Copyright © 2019 miu狗便當 保留一切權利。
     </footer>
     <script src="js/jquery-3.4.0.min.js"></script>
-    <script src="js/swiper.js"></script>
+    <!-- fancybox -->
+    <script src="js/fancybox/jquery.fancybox.pack.js"></script>
+    <script src="js/fancybox/jquery.fancybox-buttons.js"></script>
+    <!-- myscript -->
     <script src="js/script.js"></script>
 </body>
 

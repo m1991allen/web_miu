@@ -50,8 +50,6 @@ $(function () {
 
     // about
 
-
-
     // menu_mobile
     var burgerMenu = document.getElementById('burger-menu');
     var overlay = document.getElementById('menu');
@@ -60,7 +58,19 @@ $(function () {
         overlay.classList.toggle("overlay");
     });
 
-
+    //product carouselur
+    $(".fancybox").fancybox({
+        groupAttr: 'rel',
+        openEffect: 'elastic',
+        closeEffect: 'elastic',
+        closeBtn: false,
+        helpers: {
+            title: {
+                type: 'float'
+            },
+            button: {}
+        }
+    });
 });
 
 
