@@ -1160,12 +1160,13 @@ h1 div {
 
 .ct_bt_right {
     width: 20%;
+    position: relative;
 }
 
 .ct_bt_right span {
-    position: relative;
-    bottom: -26px;
-    right: 50%;
+    position: absolute;
+    bottom: -30px;
+    right: 0;
 }
 
 .contact_bottom img {
