@@ -1252,9 +1252,10 @@ h1 div {
     }
     .ct_bt_right {
         width: 100%;
+        text-align: right;
     }
     .ct_bt_right span {
-        right: auto;
+        right: 0;
     }
     .ct_bt_left_social {
         display: block;
