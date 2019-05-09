@@ -57,7 +57,7 @@ $(function () {
     });
 
     //product carouselur
-    $(".fancybox").fancybox({
+    $('.fancybox').fancybox({
         groupAttr: 'rel',
         openEffect: 'elastic',
         closeEffect: 'elastic',
