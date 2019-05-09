@@ -665,6 +665,7 @@ header>div>nav>a:hover, nav>a:focus {
     width: 50%;
     margin: 4% auto 10px;
     line-height: 60px;
+    white-space: nowrap;
 }
 
 .vision_layout_top .vision_img {
