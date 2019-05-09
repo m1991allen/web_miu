@@ -662,7 +662,7 @@ header>div>nav>a:hover, nav>a:focus {
 .about section h3 {
     text-align: center;
     border-bottom: 3px solid #967878;
-    width: 40%;
+    width: 50%;
     margin: 4% auto 10px;
     line-height: 60px;
 }
@@ -1333,6 +1333,9 @@ header>div>nav>a:hover, nav>a:focus {
     }
     .contact-form {
         width: 90%;
+    }
+    .ct_bt_left {
+        width: 100%;
     }
 }
 
