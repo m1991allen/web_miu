@@ -20,7 +20,7 @@ $(function () {
         }
     })
 
-    //contact/
+    //contact
     //material contact form
     $('.contact-form').find('.form-control').each(function () {
         var targetItem = $(this).parent();
@@ -70,7 +70,3 @@ $(function () {
         }
     });
 });
-
-
-
-
