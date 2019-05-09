@@ -1329,7 +1329,10 @@ header>div>nav>a:hover, nav>a:focus {
         width: 18%;
     }
     .ct_bt_right span {
-        bottom: -52px;
+        bottom: -53px;
+    }
+    .contact-form {
+        width: 90%;
     }
 }
 
