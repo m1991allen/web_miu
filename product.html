@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/fancybox/jquery.fancybox-buttons.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -54,28 +55,33 @@
             <div class="product">
                 <h2> Products</h2>
                 <div class="goods">
-                    <figure class="goods_item fancybox" rel="group" href="images/f1.jpg" title="雞胸肉">
+                    <figure class="goods_item fancybox" rel="group" href="images/f1.jpg" title="雞胸肉"
+                        data-aos="zoom-in-down" data-aos-duration="800" data-aos-delay="100">
                         <div class="goods_img"><img src="images/f1.jpg" alt="雞胸肉"></div>
                         <figcaption>雞胸肉</figcaption>
                     </figure>
-                    <figure class="goods_item fancybox" rel="group" href="images/f2.jpg" title="虱目魚">
+                    <figure class="goods_item fancybox" rel="group" href="images/f2.jpg" title="虱目魚"
+                        data-aos="zoom-in-down" data-aos-duration="800" data-aos-delay="200">
                         <div class="goods_img"><img src="images/f2.jpg" alt="虱目魚"></div>
                         <figcaption>虱目魚</figcaption>
                     </figure>
-                    <figure class="goods_item fancybox" rel="group" href="images/f3.jpg" title="豬耳朵">
+                    <figure class="goods_item fancybox" rel="group" href="images/f3.jpg" title="豬耳朵"
+                        data-aos="zoom-in-down" data-aos-duration="800" data-aos-delay="300">
                         <div class="goods_img"><img src="images/f3.jpg" alt="豬耳朵"></div>
                         <figcaption>豬耳朵</figcaption>
                     </figure>
-                    <figure class="goods_item fancybox" rel="group" href="images/f4.jpg" title="牛肉乾">
+                    <figure class="goods_item fancybox" rel="group" href="images/f4.jpg" title="牛肉乾"
+                        data-aos="zoom-in-down" data-aos-duration="800" data-aos-delay="400">
                         <div class="goods_img"><img src="images/f4.jpg" alt="牛肉乾"></div>
                         <figcaption>牛肉乾</figcaption>
                     </figure>
-                    <figure class="goods_item fancybox" rel="group" href="images/f5.jpg" title="雞骨粉">
+                    <figure class="goods_item fancybox" rel="group" href="images/f5.jpg" title="雞骨粉"
+                        data-aos="zoom-in-down" data-aos-duration="800" data-aos-delay="500">
                         <div class="goods_img"><img src="images/f5.jpg" alt="雞骨粉"></div>
                         <figcaption>雞骨粉</figcaption>
                     </figure>
-                    <figure class="goods_item">
-                        <a href="https://shopee.tw/carahu">
+                    <figure class="goods_item" data-aos="zoom-in-down" data-aos-duration="800" data-aos-delay="600">
+                        <a href="https://shopee.tw/carahu" target="_blank">
                             <div class="go_shop">
                                 <span><img src="images/shopee_seeklogo_b.svg" alt="">
                                     <p>來去逛逛</p>
@@ -98,6 +104,10 @@
     <script src="js/fancybox/jquery.fancybox-buttons.js"></script>
     <!-- myscript -->
     <script src="js/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
