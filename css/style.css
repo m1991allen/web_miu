@@ -122,6 +122,7 @@ main {
 
 main, .top_video {
     margin: 0 auto;
+    overflow: hidden;
 }
 
 .top_video img {
