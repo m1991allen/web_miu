@@ -16,7 +16,6 @@ $(function () {
         if (scrollVal > 100) {
             $('.top_menu').css('top', '100');
             $('.top_menu').css('transition', '.5s');
-
         }
     })
 
