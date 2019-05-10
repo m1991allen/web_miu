@@ -117,12 +117,12 @@ main {
 @media screen and (max-width:768px) {
     main {
         width: 90%;
+        overflow: hidden;
     }
 }
 
 main, .top_video {
     margin: 0 auto;
-    overflow: hidden;
 }
 
 .top_video img {
